@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Azure.Screenshots.Droid</RootNamespace>
     <AssemblyName>Azure.Screenshots.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
@@ -121,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Azure.Screenshots.Core\Azure.Screenshots.Core.csproj">
-      <Project>{31d7792c-8339-4c32-8c91-123c9b248b83}</Project>
+      <Project>{5A4059C3-37A0-4590-BD3B-511A8CAF2F8E}</Project>
       <Name>Azure.Screenshots.Core</Name>
     </ProjectReference>
   </ItemGroup>

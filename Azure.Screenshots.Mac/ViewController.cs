@@ -1,11 +1,14 @@
-﻿using System;
-
-using AppKit;
+﻿using MvvmCross.Mac.Views;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Core.ViewModels;
+using Azure.Screenshots.Core.ViewModels;
+using System;
 using Foundation;
 
 namespace Azure.Screenshots.Mac
 {
-    public partial class ViewController : NSViewController
+    [MvxViewFor(typeof(FirstViewModel))]
+    public partial class ViewController : MvxViewController
     {
         public ViewController(IntPtr handle) : base(handle)
         {

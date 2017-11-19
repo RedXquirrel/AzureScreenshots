@@ -1,9 +1,25 @@
-﻿namespace Azure.Screenshots.Mac.Views
-{
+// WARNING
+//
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the UI designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
+//
+using Foundation;
+using System.CodeDom.Compiler;
 
-    // Should subclass AppKit.NSView
-    [Foundation.Register("FirstView")]
-    public partial class FirstView
+namespace Azure.Screenshots.Mac.Views
+{
+    [Register ("FirstView")]
+    partial class FirstView
     {
+        [Action ("Label:")]
+        partial void Label (Foundation.NSObject sender);
+
+        [Action ("TextField:")]
+        partial void TextField (Foundation.NSObject sender);
+        
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

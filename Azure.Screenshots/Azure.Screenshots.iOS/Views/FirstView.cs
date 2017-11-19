@@ -8,6 +8,8 @@ namespace Azure.Screenshots.iOS.Views
     [MvxFromStoryboard]
     public partial class FirstView : MvxViewController
     {
+
+
         public FirstView(IntPtr handle) : base(handle)
         {
         }

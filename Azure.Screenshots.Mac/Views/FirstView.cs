@@ -3,51 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using AppKit;
-using MvvmCross.Mac.Views;
-using Azure.Screenshots.Core.ViewModels;
-using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.Bindings;
-using CoreGraphics;
+using MvvmCross.Binding.Mac.Views;
 
 namespace Azure.Screenshots.Mac.Views
 {
-    public partial class FirstView : MvxViewController
+    public partial class FirstView : MvxView
     {
+        #region Constructors
 
+        // Called when created from unmanaged code
         public FirstView(IntPtr handle) : base(handle)
         {
+            Initialize();
         }
 
-        public override void ViewDidLoad()
+        // Called when created directly from a XIB file
+        [Export("initWithCoder:")]
+        public FirstView(NSCoder coder) : base(coder)
         {
-            base.ViewDidLoad();
-
-            //var lbl = new NSTextView(new CGRect)
-
-
-            var set = this.CreateBindingSet<FirstView, FirstViewModel>();
-
-            var VM = (FirstViewModel)this.BindingContext;
-
-            var a = VM.Hello;
-
-
-            /*
-            set.Bind();
-            set.Bind<NSTextField>(Label).To(vm => vm.Hello);
-            set.Bind(TextField).To(vm => vm.Hello);
-
-            set.Bind<NSTextField>(Label)
-            .For("StringValue")
-            .To(vm => vm.Greeting);
-                    set.Bind(HelloLabel)
-                        .For(c => c.StringValue)
-                        .To(vm => vm.Greeting)
-                        .OneWay();
-                    set.Apply();
-
-            set.Apply();
-            */
+            Initialize();
         }
+
+        // Shared initialization code
+        void Initialize()
+        {
+        }
+
+        #endregion
     }
 }

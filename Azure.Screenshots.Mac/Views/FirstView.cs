@@ -7,15 +7,12 @@ using MvvmCross.Mac.Views;
 using Azure.Screenshots.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Binding.Bindings;
+using CoreGraphics;
 
 namespace Azure.Screenshots.Mac.Views
 {
     public partial class FirstView : MvxViewController
     {
-        public FirstView() : base("FirstView",null)
-        {
-            
-        }
 
         public FirstView(IntPtr handle) : base(handle)
         {
@@ -25,6 +22,7 @@ namespace Azure.Screenshots.Mac.Views
         {
             base.ViewDidLoad();
 
+            //var lbl = new NSTextView(new CGRect)
 
 
             var set = this.CreateBindingSet<FirstView, FirstViewModel>();

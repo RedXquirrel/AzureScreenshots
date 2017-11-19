@@ -124,6 +124,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Views\FirstView.xib" />
+    <InterfaceDefinition Include="Views\SecondView.xib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Azure.Screenshots.Core\Azure.Screenshots.Core.csproj">

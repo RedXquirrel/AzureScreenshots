@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Foundation;
 using AppKit;
+using MvvmCross.Binding.Mac.Views;
 
 namespace Azure.ScreenShots.Mac.Views
 {
-    public partial class SecondView : AppKit.NSView
+    public partial class SecondView : MvxView
     {
         #region Constructors
 

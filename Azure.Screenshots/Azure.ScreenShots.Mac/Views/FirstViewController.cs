@@ -27,7 +27,7 @@ namespace Azure.ScreenShots.Mac.Views
             Initialize();
         }
         // Call to load from the XIB/NIB file
-        public FirstViewController() : base()
+        public FirstViewController() : base("FirstView",null)
         {
             Initialize();
         }
@@ -49,7 +49,7 @@ namespace Azure.ScreenShots.Mac.Views
             var labelFull = new NSTextField(new CGRect(10, 100, 320, 40));
             View.AddSubview(labelFull);
             var bu = new NSButton(new CGRect(0, 150, 320, 40));
-            bu.Title = "Hello";
+            bu.Title = "Press to Show<SecondViewModel>()";
             View.AddSubview(bu);
 
 

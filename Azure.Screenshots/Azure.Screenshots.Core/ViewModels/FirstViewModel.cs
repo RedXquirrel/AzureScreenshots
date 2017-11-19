@@ -2,10 +2,19 @@ using MvvmCross.Core.ViewModels;
 
 namespace Azure.Screenshots.Core.ViewModels
 {
+    public class NavigateRoot : MvxViewModel
+    {
+        public NavigateRoot()
+        {
+            ShowViewModel<FirstViewModel>();
+        }
+    }
+
     public class FirstViewModel
         : MvxViewModel
     {
-        string hello = "Hello MvvmCross";
+
+        string hello = "Hello MvvmCross - Bound from FirstViewModel";
         public string Hello
         {
             get { return hello; }
@@ -37,7 +46,7 @@ namespace Azure.Screenshots.Core.ViewModels
             {
                 return new MvxCommand(() =>
                 {
-                    //ShowViewModel<SecondViewModel>();
+                    ShowViewModel<SecondViewModel>();
                 });
             }
         }

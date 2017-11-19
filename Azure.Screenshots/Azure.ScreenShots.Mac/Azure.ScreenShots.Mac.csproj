@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <TargetFrameworkVersion>4.5</TargetFrameworkVersion>		
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9773AA9F-7AED-491E-B91D-14FDEE22D29E}</ProjectGuid>
@@ -52,6 +53,27 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.4.2\lib\Xamarin.Mac20\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.Mac">
+      <HintPath>..\..\packages\MvvmCross.Platform.5.4.2\lib\Xamarin.Mac20\MvvmCross.Platform.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\..\packages\MvvmCross.Core.5.4.2\lib\Xamarin.Mac20\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Mac">
+      <HintPath>..\..\packages\MvvmCross.Core.5.4.2\lib\Xamarin.Mac20\MvvmCross.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.4.2\lib\Xamarin.Mac20\MvvmCross.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Binding.Mac">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.4.2\lib\Xamarin.Mac20\MvvmCross.Binding.Mac.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Localization">
+      <HintPath>..\..\packages\MvvmCross.Binding.5.4.2\lib\Xamarin.Mac20\MvvmCross.Localization.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -69,21 +91,38 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="ToDo-MvvmCross\_ Mac UI.txt" />
+    <None Include="AppDelegate.cs.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="Setup.cs" />
+    <Compile Include="DebugTrace.cs" />
+    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\FirstViewController.cs" />
+    <Compile Include="Views\FirstView.designer.cs">
+      <DependentUpon>FirstView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FirstViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\FirstView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Azure.Screenshots.Core\Azure.Screenshots.Core.csproj">
+      <Project>{5A4059C3-37A0-4590-BD3B-511A8CAF2F8E}</Project>
+      <Name>Azure.Screenshots.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

@@ -31,5 +31,16 @@ namespace Azure.Screenshots.Core.ViewModels
             get { return string.Format("{0} {1}", firstName, lastName); }
         }
 
+        public IMvxCommand GoCommand
+        {
+            get
+            {
+                return new MvxCommand(() =>
+                {
+                    //ShowViewModel<SecondViewModel>();
+                });
+            }
+        }
+
     }
 }

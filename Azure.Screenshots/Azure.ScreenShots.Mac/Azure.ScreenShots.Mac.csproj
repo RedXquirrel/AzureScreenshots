@@ -98,7 +98,6 @@
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
     <None Include="ToDo-MvvmCross\_ Mac UI.txt" />
-    <None Include="AppDelegate.cs.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -112,6 +111,14 @@
     </Compile>
     <Compile Include="Views\FirstViewController.designer.cs">
       <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecondView.cs" />
+    <Compile Include="Views\SecondViewController.cs" />
+    <Compile Include="Views\SecondView.designer.cs">
+      <DependentUpon>SecondView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecondViewController.designer.cs">
+      <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
